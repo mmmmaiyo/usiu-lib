@@ -1,0 +1,147 @@
+/* Your custom css code goes here */
+/* Blue: #283891, Yellow: #ffcb08*/
+/* Highlights Button hover: #17225b*/
+
+.navbar-brand{
+    font-size: 20px;
+    padding: 5px;
+}
+
+#index-additions{
+    border-top: none;
+}
+
+.bk_cover{
+    max-width: 125%;
+}
+
+.em_log_out {
+    display: flex;
+    justify-content: center;
+  } 
+
+.owl-carousel .owl-item .em_log {
+    width: 75%; /* Ensure all images take the full width of their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+/*--NAVBAR--*/
+.probootstrap-navbar {
+    background-color: #283891;
+}
+
+.probootstrap-navbar .navbar-brand{
+    width: 30%;
+    height: auto;
+    margin-bottom: 50px;
+    margin-left: 25px !important;
+}
+
+#usiu_logo{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+   
+}
+
+.probootstrap-top-quick-contact-info span i {
+    color: #ffcb08;
+}
+
+.probootstrap-top-social ul li a {
+    color: #ffcb08;
+}
+
+.probootstrap-navbar .navbar-nav>li>a {
+    color:rgb(255, 255, 255);
+    font-size: 110%;
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        margin-top: 40px;
+    }
+}
+
+.probootstrap-navbar .navbar-nav > li.active > a{
+    color: #ffcb08 !important;
+}
+
+.probootstrap-header-top{
+    background-color: #283891;
+    color: #ffcb08;
+}
+
+.navbar-default .navbar-brand{
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover{
+    color: #ffcb08;
+}
+
+.probootstrap-navbar .navbar-nav > li > a:active, .probootstrap-navbar .navbar-nav > li > a:focus, .probootstrap-navbar .navbar-nav > li > a:hover {
+  color:#ffcb08;
+}
+
+/*--HERO CONTENT--*/
+.probootstrap-flex-block .probootstrap-text {
+    color: black;
+}
+
+.probootstrap-section.probootstrap-section-colored {
+    background: #283891;
+}
+
+.btn.btn-primary{
+    border: 1px solid #283891;
+    background: #283891;
+    color: #ffcb08;
+}
+
+.btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover {
+    background: #17225b;
+}
+
+/*--HIGHLIGHTS--*/
+.nav-pills.probootstrap-tabs > li > a, .nav-tabs.probootstrap-tabs > li > a {
+    background: #283891;
+    color: #ffcb08;
+}
+
+.nav-pills.probootstrap-tabs > li > a:hover, .nav-tabs.probootstrap-tabs > li > a:hover {
+    background: #17225b;
+}
+
+.probootstrap-featured-news-box:focus .probootstrap-text, .probootstrap-featured-news-box:hover .probootstrap-text {
+    background: #283891;
+}
+
+.probootstrap-featured-news-box .probootstrap-text {
+    border-bottom: 3px solid #283891;
+}
+
+/*--FOOTER--*/
+.probootstrap-footer .probootstrap-footer-widget h3 {
+    color: #ffcb08;
+}
+.probootstrap-footer {
+    background: #283891;
+}
+
+.probootstrap-footer .probootstrap-footer-widget .probootstrap-contact-info li i {
+    color: #ffffff;
+}
+
+.probootstrap-footer a {
+    color: #ffffff;
+}
+
+.probootstrap-footer a:hover {
+    color: #ffcb08;
+}
+
+/*--COPYRIGHT--*/
+.probootstrap-footer .probootstrap-copyright{
+    background: #283891;
+}
