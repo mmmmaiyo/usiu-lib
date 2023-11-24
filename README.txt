@@ -1,14 +1,15 @@
-THEME: Enlight - Free Bootstrap Theme
-AUTHOR: ProBootstrap.com
-AUTHOR URI: https://probootstrap.com/
-Twitter: https://twitter.com/probootstrap
-Facebook: https://facebook.com/probootstrap
+USIU-AFRICA LIBRARY REDESIGN
+Project undertaken in partial fulfillment of undergraduate requirements
+AUTHOR: Nigel Maiyo
 
 
 CREDITS:
 
 Bootstrap
 http://getbootstrap.com/
+
+Probootstrap
+https://probootstrap.com/
 
 jQuery
 http://jquery.com/
