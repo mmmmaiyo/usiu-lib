@@ -36,13 +36,16 @@
     </div>
 
     <div class="probootstrap-login" id="probootstrap-login">
-        <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
-        <form id="login-form" action="#">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button class="btn btn-primary">Login</button>
-        </form>
+        <div class="modal-content">
+            <a href="#" class="probootstrap-closes js-probootstrap-closes"><i class="icon-cross"></i></a>
+            <form id="login-form" action="#">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button class="btn btn-primary">Login</button>
+            </form>
+        </div>
     </div>
+
 
 
 
@@ -519,14 +522,17 @@
 
         loginLink.addEventListener('click', function(e) {
             e.preventDefault();
-            loginForm.style.display = 'block';
+            loginForm.style.visibility = 'visible';
         });
 
-        var closeLink = document.querySelector('.js-probootstrap-close');
+        var closeLink = document.querySelector('.js-probootstrap-closes');
         closeLink.addEventListener('click', function(e) {
             e.preventDefault();
-            loginForm.style.display = 'none';
+            loginForm.style.visibility = 'hidden';
         });
+
+
+
 
         window.onload = function() {
 
