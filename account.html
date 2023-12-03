@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<!-- 
+  Theme Name: Enlight
+  Theme URL: https://probootstrap.com/enlight-free-education-responsive-bootstrap-website-template
+  Author: ProBootstrap.com
+  Author URL: https://probootstrap.com
+  License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USIU-Africa Library & Information Centre</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--SEARCH-->
+    <div class="probootstrap-search" id="probootstrap-search">
+        <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+        <!-- this is the search form we want it to have unique functionalities -->
+        <form action="#">
+        <input type="search" id="searchs" placeholder="Search a keyword and hit enter...">
+        </form>
+    </div>
+    <!--LOGIN-->
+    <div class="probootstrap-login" id="probootstrap-login">
+        <div class="modal-content">
+            <a href="#" class="probootstrap-closes js-probootstrap-closes"><i class="icon-cross"></i></a>
+            <form id="login-form" action="#">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="probootstrap-page-wrapper">
+      <!-- Fixed navbar -->
+      
+      <div class="probootstrap-header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+              <span><i class="icon-location2"></i>USIU Road, Off Thika Road (Exit 7)</span>
+              <span><i class="icon-phone2"></i>+254 730 116690</span>
+              <span><i class="icon-mail"></i>askalibrarian@usiu.ac.ke</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+              <ul>
+                <li><a href="https://twitter.com/UsiuLibrary"><i class="icon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/usiulibrary/"><i class="icon-facebook2"></i></a></li>
+                <li><a href="# " class="probootstrap-search-icon js-probootstrap-search "><i class="icon-search "></i></a></li>
+                <li><a href="#" class="probootstrap-login-icon js-probootstrap-login">Log In</a></li>
+                <li><a href="#" id="js-probootstrap-logout">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="btn-more js-btn-more visible-xs">
+              <a href="#"><i class="icon-dots-three-vertical "></i></a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" title="USIU-A Library"><img src="/img/usiu_400.jpg" id="usiu_logo"></a>
+          </div>
+
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Browse</a>
+                <ul class="dropdown-menu">
+                  <li><a href="resources.html">eResources</a></li>
+                  <li><a href="newspapers.html">eNewspapers</a></li>
+                </ul>
+              </li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate">
+              <h1 class="mb0">My Account</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="probootstrap-section probootstrap-section-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row probootstrap-gutter0">
+                <div class="col-md-4" id="probootstrap-sidebar">
+                  <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
+                    <h3 id="userAccountName">User Account</h3>
+                    <ul class="probootstrap-side-menu">
+                      <li><a id="userInfo">User Information</a></li>
+                      <li><a id="userBooks">Books</a></li>
+                      <!--<li><a href="#" id="js-probootstrap-logout">Log Out</a></li>-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                  <h2>First Name</h2>
+                  <h3 id="firstname"></h3>
+                  <h2>Last Name</h2>
+                  <h3 id="lastname"></h3>
+                </div>
+                <!-- This is where the borrowed books will be rendered -->
+                <div id="borrowed-book-container" class="row">
+                    <!-- Books will be added here dynamically -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="probootstrap-footer probootstrap-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                <h3>Opening Hours</h3>
+                <p>Mon – Fri: 8.15 a.m. – 9 p.m.<br>Saturday: 9.00 a.m. – 6 p.m.<br> Sunday: 11.00 a.m. – 5 p.m.<br>Public Holidays: CLOSED</p>
+                <h3>During Semester Breaks</h3>
+                <p>Mon – Fri: 8.15 a.m. – 5 p.m.<br>Saturday, Sunday, & Public Holidays: CLOSED</p>
+                <h3>Social</h3>
+                <ul class="probootstrap-footer-social">
+                  <li><a href="https://twitter.com/UsiuLibrary"><i class="icon-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/usiulibrary/"><i class="icon-facebook"></i></a></li>
+                  <li><a href="https://www.linkedin.com/school/united-states-international-university-africa/"><i class="icon-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-md-push-1">
+              <div class="probootstrap-footer-widget">
+                <h3>Links</h3>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Resources</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                <h3>Contact Info</h3>
+                <ul class="probootstrap-contact-info">
+                  <li><i class="icon-location2"></i> <span>USIU-Africa Library & Information Center<br>P. O. Box 14634-00800 NAIROBI, Kenya</span></li>
+                  <li><i class="icon-mail"></i><span>library@usiu.ac.ke<br>asklibrarian@usiu.ac.ke</span></li>
+                  <li><i class="icon-phone2"></i><span>+254 730 116000</span></li>
+                </ul>
+              </div>
+            </div>
+           
+          </div>
+          <!-- END row -->
+          
+        </div>
+
+        <div class="probootstrap-copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 text-left">
+                <p>&copy; 2022 <a href="https://github.com/mmmmaiyo">Nigel Maiyo</a>. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> and help from <a href="https://probootstrap.com/">ProBootstrap.com</a></p>
+              </div>
+              <div class="col-md-4 probootstrap-back-to-top">
+                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- END wrapper -->
+    
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        const username = localStorage.getItem('username');
+        document.querySelector('#userAccountName').textContent = username;
+
+        // Create a new XMLHttpRequest object
+		var profile_xhr = new XMLHttpRequest();
+
+		// Configure the request
+		profile_xhr.open('GET', 'http://localhost:8080/users/profile?username='+username, true);
+
+        // Set up a handler for when the request finishes
+        profile_xhr.onload = function () {
+            if (profile_xhr.status === 200) {
+                // Parse the JSON response
+                var userProfile = JSON.parse(profile_xhr.responseText);
+                console.log(userProfile); // Log the user profile data
+                // Use the user profile data as needed
+                document.getElementById('firstname').textContent = userProfile.firstName;
+                document.getElementById('lastname').textContent = userProfile.lastName;
+            } else {
+                console.error('Request failed:', profile_xhr.status);
+            }
+        };
+
+        // Send the request
+        profile_xhr.send();
+        // Get the container element
+        var container = document.getElementById('borrowed-book-container');
+
+        const borrow_xhr = new XMLHttpRequest();
+
+        borrow_xhr.open('GET',`http://localhost:8080/borrowedbooks/borrow/${username}`, true);
+        borrow_xhr.onreadystatechange = function () {
+            if (borrow_xhr.readyState === XMLHttpRequest.DONE) {
+                if (borrow_xhr.status === 200) {
+                    const books = JSON.parse(borrow_xhr.responseText);
+
+                    books.forEach(book => {
+                        var bookElement = document.createElement('div');
+                        bookElement.className = 'col-md-6';
+
+                        bookElement.innerHTML = `
+                            <div class="probootstrap-service-2 probootstrap-animates ">
+                                <div class="text " style="width:auto">
+                                    <h3>${book.title}</h3>
+                                    <p>${book.author}</p>
+                                    <p>${book.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(bookElement);
+                     });
+                } else {
+                    console.error('Error:', borrow_xhr.status);
+                }
+            }
+        };
+
+        borrow_xhr.send();
+    </script>
+
+  </body>
+</html>

@@ -24,59 +24,84 @@
     <![endif]-->
   </head>
   <body>
-
+    <!--SEARCH-->
     <div class="probootstrap-search" id="probootstrap-search">
       <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+      <!-- this is the search form we want it to have unique functionalities -->
       <form action="#">
-        <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+      <input type="search" id="searchs" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
-    
+    <!--LOGIN-->
+    <div class="probootstrap-login" id="probootstrap-login">
+      <div class="modal-content">
+          <a href="#" class="probootstrap-closes js-probootstrap-closes"><i class="icon-cross"></i></a>
+          <form id="login-form" action="#">
+              <input type="text" id="username" placeholder="Username">
+              <input type="password" id="password" placeholder="Password">
+              <button class="btn btn-primary">Login</button>
+          </form>
+      </div>
+    </div>
+
     <div class="probootstrap-page-wrapper">
-      <!-- Fixed navbar -->
-      
+    <!-- Fixed navbar -->
+
       <div class="probootstrap-header-top">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>USIU Road, Off Thika Road (Exit 7)</span>
-              <span><i class="icon-phone2"></i>+254 730 116690</span>
-              <span><i class="icon-mail"></i>askalibrarian@usiu.ac.ke</span>
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+                    <span><i class="icon-location2"></i>USIU Road, Off Thika Road (Exit 7)</span>
+                    <span><i class="icon-phone2"></i>+254 730 116690</span>
+                    <span><i class="icon-mail"></i>askalibrarian@usiu.ac.ke</span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+                    <ul>
+                        <li><a href="https://twitter.com/UsiuLibrary"><i class="icon-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/usiulibrary/"><i class="icon-facebook2"></i></a></li>
+                        <li><a href="# " class="probootstrap-search-icon js-probootstrap-search "><i
+                                    class="icon-search "></i></a></li>
+                        <li><a href="#" class="probootstrap-login-icon js-probootstrap-login">Log In</a></li>
+                        <li><a href="#" id="js-probootstrap-logout">Log Out</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="https://twitter.com/UsiuLibrary"><i class="icon-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/usiulibrary/"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
-          <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
+            <div class="navbar-header">
+                <div class="btn-more js-btn-more visible-xs">
+                    <a href="#"><i class="icon-dots-three-vertical "></i></a>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" title="USIU-A Library"><img src="img/usiu_400.jpg"
+                        id="usiu_logo"></a>
             </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html" title="USIU-A Library"><img src="/img/usiu_400.jpg" id="usiu_logo"></a>
-          </div>
 
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li class="active"><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="userAccount" style="visibility: hidden;"><a href="account.html">My Account</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Browse</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resources.html">eResources</a></li>
+                            <li><a href="newspapers.html">eNewspapers</a></li>
+                            <li><a href="books.html">All Books</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
       </nav>
       
