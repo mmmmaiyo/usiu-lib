@@ -147,43 +147,66 @@
                     // Get the container element
                     var container = document.getElementById('book-container');
                     console.log(books);
-                    console.log('we are here 222');
 
+                    // Function to filter and render books based on search query
                     // Function to filter and render books based on search query
                     function renderBooks(searchQuery) {
                         // Clear existing content in the container
                         container.innerHTML = '';
                         console.log(searchQuery);
+
+                        // Check if searchQuery is null or undefined
+                        if (!searchQuery) {
+                            console.log('No search query provided. Displaying all books.');
+
+                            // Render all books
+                            books.forEach(book => {
+                                var bookElement = document.createElement('div');
+                                bookElement.className = 'col-md-6';
+
+                                bookElement.innerHTML = `
+                <div class="probootstrap-service-2 probootstrap-animates ">
+                    <div class="text " style="width:auto">
+                        <h3>${book.title}</h3>
+                        <p>${book.author}</p>
+                        <p>${book.description}</p>
+                        <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Order Book</button>
+                    </div>
+                </div>
+            `;
+                                container.appendChild(bookElement);
+                            });
+
+                            return;
+                        }
+
                         // Filter books based on the search query
                         const filteredBooks = books.filter(book => {
-                            console.log('Book:', book.description.toLowerCase().includes(searchQuery.toLowerCase())); // Check the book object structure
-                            console.log('SearchQuery:', searchQuery); // Check the search query value
+                            console.log('we are here 2ss22');
+
+                            console.log('Boossks:', book);
+                            console.log('SearchQuery:', searchQuery);
 
                             const isTitleMatch = book.title.toLowerCase().includes(searchQuery.toLowerCase());
-                            const isAuthorMatch = book.author.toLowerCase().includes(searchQuery.toLowerCase());
-                            const isDescriptionMatch = book.description.toLowerCase().includes(searchQuery.toLowerCase());
+
 
                             console.log('Title Match:', isTitleMatch);
-                            console.log('Author Match:', isAuthorMatch);
-                            console.log('Description Match:', isDescriptionMatch);
+
 
                             return (
-                                book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                                book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                                book.description.toLowerCase().includes(searchQuery.toLowerCase())
+                                isTitleMatch
                             );
                         });
+
                         console.log('len of books', filteredBooks.length)
 
                         if (filteredBooks.length === 0) {
-                            console.log('len of books', filteredBooks.length)
-
                             alert('No books found!');
                             var noBooksMessage = document.createElement('div');
                             noBooksMessage.className = 'col-md-12';
                             noBooksMessage.innerHTML = '<p>No available books</p>';
                             container.appendChild(noBooksMessage);
-                            return; // Exit the function since there are no books to render
+                            return;
                         }
 
                         // Loop through the filtered books and create the book elements
@@ -192,18 +215,20 @@
                             bookElement.className = 'col-md-6';
 
                             bookElement.innerHTML = `
-                            <div class="probootstrap-service-2 probootstrap-animates ">
-                                <div class="text " style="width:auto">
-                                    <h3>${book.title}</h3>
-                                    <p>${book.author}</p>
-                                    <p>${book.description}</p>
-                                    <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Order Book</button>
-                                </div>
-                            </div>
-                        `;
+            <div class="probootstrap-service-2 probootstrap-animates ">
+                <div class="text " style="width:auto">
+                    <h3>${book.title}</h3>
+                    <p>${book.author}</p>
+                    <p>${book.description}</p>
+                    <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Order Book</button>
+                </div>
+            </div>
+        `;
                             container.appendChild(bookElement);
+                            console.log(container);
                         });
                     }
+
 
                     // Call the renderBooks function with the search query
                     renderBooks(query);
