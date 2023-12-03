@@ -134,6 +134,7 @@
             }
         </script>
         <script>
+            var username = localStorage.getItem('username');
             // Extract the search query from the URL
             var urlParams = new URLSearchParams(window.location.search);
             var query = urlParams.get('query');
@@ -226,6 +227,31 @@
         `;
                             container.appendChild(bookElement);
                             console.log(container);
+                        });
+
+                        document.querySelectorAll('.order-book-btn').forEach(button => {
+                            button.addEventListener('click', async (event) => {
+                                const username = event.target.getAttribute('data-username');
+                                const bookId = event.target.getAttribute('data-bookid');
+
+                                // Make a POST request to the specified route
+                                try {
+                                    const response = await fetch(`http://localhost:8080/BorrowedBooks/borrow/${username}/${bookId}`, {
+                                        method: 'POST',
+                                    });
+
+                                    if (response.ok) {
+                                        // Handle success (e.g., show a success message)
+                                        console.log('Book ordered successfully');
+                                        alert('Book ordered successfully')
+                                    } else {
+                                        // Handle errors (e.g., show an error message)
+                                        console.error('Failed to order book');
+                                    }
+                                } catch (error) {
+                                    console.error('An error occurred:', error);
+                                }
+                            });
                         });
                     }
 

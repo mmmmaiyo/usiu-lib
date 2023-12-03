@@ -205,7 +205,7 @@ jQuery(document).ready(function() {
 
 				// Make a POST request to the specified route
 				try {
-				  const response = await fetch(`http://localhost:8080/borrowedbooks/borrow/${username}/${bookId}`, {
+				  const response = await fetch(`http://localhost:8080/BorrowBooks/borrow/${username}/${bookId}`, {
 					method: 'POST',
 				  });
 
