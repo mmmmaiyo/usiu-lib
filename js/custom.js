@@ -34,9 +34,10 @@ jQuery(document).ready(function() {
 			localStorage.setItem('isLoggedIn', 'true');
 			localStorage.setItem('username', user.username);
 			} else {
-			alert('An error occurred!');
+			alert('Check password and try again later ');
 			console.error('An error occurred:', xhr.responseText);
 			}
+			window.location.href = 'index.html?reload=true'
 		};
 
 		// Send the request with the username and password as JSON
@@ -45,10 +46,7 @@ jQuery(document).ready(function() {
 			password: password
 		}));
 
-		//Make logout element visible
-		logOut.style.visibility = 'visible';
-		//Make account element visible
-		userAcc.style.visibility = 'visible';
+	
 
 	});
 
@@ -58,7 +56,7 @@ jQuery(document).ready(function() {
 	var link = document.querySelector('.probootstrap-login-icon');
 	// Get logout link element
 	var logOut = document.getElementById('js-probootstrap-logout');
-	logOut.style.visibility = 'hidden';
+
 
 	// Get account link element
 	var userAcc = document.getElementById('userAccount')
@@ -78,7 +76,7 @@ jQuery(document).ready(function() {
 		e.preventDefault();
 		localStorage.clear();
 		window.location.href = 'index.html?reload=true';
-		logOut.style.visibility = 'hidden';
+	
 	});
 
 	window.onload = function () {
@@ -112,12 +110,21 @@ jQuery(document).ready(function() {
 		if (username) {
 		  // If the username is found, replace the login link with the username
 		  document.querySelector('.probootstrap-login-icon').textContent = username;
+		  //Make logout element visible
+		  logOut.style.visibility = 'visible';
+		  console.log('username', logOut);
+		  //Make account element visible
+		  userAcc.style.visibility = 'visible';
+		 // window.location.href = 'index.html?reload=true';
+	
 		}
-		
-		//Make logout element visible
-		logOut.style.visibility = 'visible';
-		//Make account element visible
-		userAcc.style.visibility = 'visible';
+		else{
+			logOut.style.visibility = 'hidden';
+
+		}
+		// refresh the page
+
+
 	  }
 	  
 
