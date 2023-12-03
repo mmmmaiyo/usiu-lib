@@ -172,3 +172,11 @@
 .probootstrap-footer .probootstrap-copyright {
     background: #283891;
 }
+
+/*--ACCOUNT SIDEBAR--*/
+.info-container {
+    visibility: visible;
+}
+.borrowed-book-container {
+    visibility: hidden;
+}

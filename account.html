@@ -121,13 +121,13 @@
                                 <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
                                     <h3 id="userAccountName">User Account</h3>
                                     <ul class="probootstrap-side-menu">
-                                        <li><a id="userInfo">User Information</a></li>
-                                        <li><a id="userBooks">Books</a></li>
+                                        <li><a href="" id="userInfo">User Information</a></li>
+                                        <li><a href="" id="userBooks">Books</a></li>
                                         <!--<li><a href="#" id="js-probootstrap-logout">Log Out</a></li>-->
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                            <div class="col-md-7 col-md-push-1  probootstrap-animate info-container" id="probootstrap-content">
                                 <h2>First Name</h2>
                                 <h3 id="firstname"></h3>
                                 <h2>Last Name</h2>
@@ -211,6 +211,28 @@
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
+        const info = document.getElementsByClassName('info-container')[0];
+        const borrowed_books = document.getElementById('borrowed-book-container');
+        const userInfo = document.getElementById('userInfo');
+        const userBooks = document.getElementById('userBooks');
+
+        info.style.display = 'none';
+        borrowed_books.style.display = 'none';
+
+        userInfo.addEventListener('click', function (e) {
+            e.preventDefault();
+            info.style.visibility = 'visible';
+            info.style.display = 'initial'
+            borrowed_books.style.display = 'none';
+        });
+        userBooks.addEventListener('click', function (e) {
+            e.preventDefault();
+            info.style.display = 'none';
+            borrowed_books.style.visibility = 'visible';
+            borrowed_books.style.display = 'initial'
+        });
+    </script>
+    <script>
         const username = localStorage.getItem('username');
         document.querySelector('#userAccountName').textContent = username;
 
@@ -257,49 +279,44 @@
                         <h3>${book.title}</h3>
                         <p>${book.author}</p>
                         <p>${book.description}</p>
+                        <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Return Book</button>
                     </div>
                 </div>
             `;
                     container.appendChild(bookElement);
                 });
+                document.querySelectorAll('.order-book-btn').forEach(button => {
+                    button.addEventListener('click', async (event) => {
+                        const username = event.target.getAttribute('data-username');
+                        const bookId = event.target.getAttribute('data-bookid');
+
+                        // Make a POST request to the specified route
+                        try {
+                            const response = await fetch(`http://localhost:8080/BorrowedBooks/return/${username}/${bookId}`, {
+                                method: 'POST',
+                            });
+
+                            if (response.ok) {
+                                // Handle success (e.g., show a success message)
+                                console.log('Book returned successfully');
+                                alert('Book returned successfully');
+                                // Refresh the page
+                                window.location.reload();
+                            } else {
+                                // Handle errors (e.g., show an error message)
+                                console.error('Failed to return book');
+                            }
+                        } catch (error) {
+                            console.error('An error occurred:', error);
+                        }
+                    });
+                });
             })
             .catch(error => {
                 console.error('Error:', error);
             });
-
-        
-        /*const borrow_xhr = new XMLHttpRequest();
-
-        borrow_xhr.open('GET', `http://localhost:8080/BorrowedBooks/borrowed/${username}`, true);
-        borrow_xhr.onreadystatechange = function() {
-            if (borrow_xhr.readyState === XMLHttpRequest.DONE) {
-                if (borrow_xhr.status === 200) {
-                    const books = JSON.parse(borrow_xhr.responseText);
-
-                    books.forEach(book => {
-                        var bookElement = document.createElement('div');
-                        bookElement.className = 'col-md-6';
-
-                        bookElement.innerHTML = `
-                            <div class="probootstrap-service-2 probootstrap-animates ">
-                                <div class="text " style="width:auto">
-                                    <h3>${book.title}</h3>
-                                    <p>${book.author}</p>
-                                    <p>${book.description}</p>
-                                    <p>${book}</p>
-                                </div>
-                            </div>
-                        `;
-                        container.appendChild(bookElement);
-                    });
-                } else {
-                    console.error('Error:', borrow_xhr.status);
-                }
-            }
-        };
-
-        borrow_xhr.send();*/
     </script>
+    
 
 </body>
 
