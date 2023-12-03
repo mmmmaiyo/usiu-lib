@@ -132,13 +132,15 @@ jQuery(document).ready(function() {
 
 		  // Function to filter and render books based on search query
 		  function renderBooks(searchQuery) {
+
+			console.log('we are here 2');
 			// Clear existing content in the container
 			container.innerHTML = '';
-
+			console.log(searchQuery);
 			// Filter books based on the search query
 			const filteredBooks = books.filter(book => {
 			  
-				/*
+				
 			  	console.log('Book:', book); // Check the book object structure
 				console.log('SearchQuery:', searchQuery); // Check the search query value
 
@@ -149,7 +151,7 @@ jQuery(document).ready(function() {
 				console.log('Title Match:', isTitleMatch);
 				console.log('Author Match:', isAuthorMatch);
 				console.log('Description Match:', isDescriptionMatch);
-				*/
+				
 
 				return (
 				book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -219,22 +221,18 @@ jQuery(document).ready(function() {
 		  
 
 		  // Event listener for the search input
+		  
 		  var searchInput = document.getElementById('searchs');
 		  var probootstrapSearch = document.getElementById('probootstrap-search');
 
 		  searchInput.addEventListener('keyup', function (event) {
 			if (event.key === 'Enter') {
-			  // Redirect to the book section
-			  window.location.href = 'books.html';
-			  // Alternatively, you can scroll to the section:
-			  // document.getElementById('book-section').scrollIntoView({ behavior: 'smooth' });
-
-			  // Render books based on the search query
-			  probootstrapSearch.classList.remove('active');
-			  renderBooks(searchInput.value);
+				// Append the search query to the URL as a query parameter and navigate to the new page
+				window.location.href = 'search.html?query=' + encodeURIComponent(searchInput.value);
 			}
-		  });
-		  renderBooks('');
+		});
+	
+		
 		});
 	};
 
