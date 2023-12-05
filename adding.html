@@ -105,18 +105,13 @@
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
                     <h3>Pages</h3>
                     <ul class="probootstrap-side-menu">
-                      
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="courses.html">Resources</a></li>
-                      <li><a href="teachers.html">About Us</a></li>
-                      <li><a href="events.html">Events</a></li>
-                      <li class="active"><a>Contact Us</a></li>
+                      <li><a href="" id="addBook">Add Book(s)</a></li>
+                      <li><a href="" id="addUser">Add User(s)</a></li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                <div class="col-md-7 col-md-push-1  probootstrap-animate add-book" id="probootstrap-content">
                   <h2>Add Books</h2>
-                  <p id="check-success">Success?</p>
                   <form id="adder" action="#" method="post" class="probootstrap-form">
                     <div class="form-group">
                       <label for="name">Title</label>
@@ -131,7 +126,31 @@
                       <textarea cols="30" rows="10" class="form-control" id="description" name="message"></textarea>
                     </div>
                     <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Send Message">
+                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Submit">
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-7 col-md-push-1  probootstrap-animate add-user" id="probootstrap-content">
+                  <h2>Add User</h2>
+                  <form id="register" action="#" method="post" class="probootstrap-form">
+                    <div class="form-group">
+                      <label for="name">First Name</label>
+                      <input type="text" class="form-control" id="first-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Last Name</label>
+                      <input type="text" class="form-control" id="last-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Username</label>
+                      <input type="text" class="form-control" id="user-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Password</label>
+                      <input type="text" class="form-control" id="pass-word">
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Submit">
                     </div>
                   </form>
                 </div>
@@ -148,44 +167,109 @@
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        var adder = document.getElementById('adder');
-        adder.addEventListener('submit', function (e) {
-		// Prevent the form from submitting normally
-		e.preventDefault();
+      const add_book = document.getElementsByClassName('add-book')[0];
+      const add_user = document.getElementsByClassName('add-user')[0];
+      const addBook = document.getElementById('addBook');
+      const addUser = document.getElementById('addUser');      
 
-	  	// Get the username and password values
-		var title = document.getElementById('title').value;
-		var author = document.getElementById('author').value;
+      add_book.style.display = 'none';
+      add_user.style.display = 'none';
+
+      addBook.addEventListener('click', function (e) {
+        e.preventDefault();
+        add_book.style.visibility = 'visible';
+        add_book.style.display = 'initial'
+        add_user.style.display = 'none';
+      });
+
+      addUser.addEventListener('click', function (e) {
+        e.preventDefault();
+        add_user.style.visibility = 'visible';
+        add_user.style.display = 'initial'
+        add_book.style.display = 'none';
+      });
+    </script>
+    <script>
+      var adder = document.getElementById('adder');
+      adder.addEventListener('submit', function (e) {
+        // Prevent the form from submitting normally
+        e.preventDefault();
+
+        // Get the username and password values (change - remove .value)
+        var title = document.getElementById('title').value;
+        var author = document.getElementById('author').value;
         var description = document.getElementById('description').value;
 
-		// Create a new XMLHttpRequest object
-		var xhr = new XMLHttpRequest();
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
 
-		// Configure the request
-		xhr.open('POST', 'http://localhost:8080/users/books', true);
-		xhr.setRequestHeader('Content-Type', 'application/json');
+        // Configure the request
+        xhr.open('POST', 'http://localhost:8080/users/books', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
 
-		// Set up a handler for when the request finishes
-		xhr.onload = function () {
-			if (xhr.status === 200) {            
-			    document.getElementById('check-success').textContent = 'Book Added Successfully.';
-			} else {
-                alert('An error occurred!');
-                console.error('An error occurred:', xhr.responseText);
-			}
-		};
+        // Set up a handler for when the request finishes
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            alert('Book Added Successfully.');
+          } else {
+            alert('An error occurred!');
+            console.error('An error occurred:', xhr.responseText);
+          }
+        };
 
-		// Send the request with the username and password as JSON
-		xhr.send(JSON.stringify({
-			title: title,
-			author: author,
-            description: description
-		}));
-
+          // Send the request with the username and password as JSON
+          //Change - add .value
+        xhr.send(JSON.stringify({
+          title: title,
+          author: author,
+          description: description
+        }));
+        
         title.reset();
         author.reset();
         description.reset();
-	});
+      });
+    </script> 
+    <script>
+      const register = document.getElementById('register');
+
+      register.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        //Get user values
+        var first_name = document.getElementById('first-name');
+        var last_name = document.getElementById('last-name');
+        var user_name = document.getElementById('user-name');
+        var pass_word = document.getElementById('pass-word');
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure the request
+        xhr.open('POST', 'http://localhost:8080/users/register', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            alert('User Registered Successfully.');
+          } else {
+            alert('An error occurred!');
+            console.error('An error occurred:', xhr.responseText);
+          }
+        };
+
+        xhr.send(JSON.stringify({
+          firstName: first_name.value,
+          lastName: last_name.value,
+          username: user_name.value,
+          password: pass_word.value
+        }));
+
+        first_name.reset();
+        last_name.reset();
+        user_name.reset();
+        pass_word.reset();
+      });
     </script>
 
   </body>

@@ -45,9 +45,6 @@ jQuery(document).ready(function() {
 			username: username,
 			password: password
 		}));
-
-	
-
 	});
 
 	// JavaScript
