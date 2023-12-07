@@ -25,35 +25,35 @@
   </head>
   <body>
 
-    <div class="probootstrap-search" id="probootstrap-search">
-      <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+    <div class="pbs-search" id="pbs-search">
+      <a href="#" class="pbs-close js-pbs-close"><i class="icon-cross"></i></a>
       <form action="#">
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
     
-    <div class="probootstrap-page-wrapper">
+    <div class="pbs-page-wrapper">
       <!-- Fixed navbar -->
       
-      <div class="probootstrap-header-top">
+      <div class="pbs-header-top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+            <div class="col-lg-9 col-md-9 col-sm-9 pbs-top-quick-contact-info">
               <span><i class="icon-location2"></i>USIU Road, Off Thika Road (Exit 7)</span>
               <span><i class="icon-phone2"></i>+254 730 116690</span>
               <span><i class="icon-mail"></i>askalibrarian@usiu.ac.ke</span>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+            <div class="col-lg-3 col-md-3 col-sm-3 pbs-top-social">
               <ul>
                 <li><a href="https://twitter.com/UsiuLibrary"><i class="icon-twitter"></i></a></li>
                 <li><a href="https://www.facebook.com/usiulibrary/"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
+                <li><a href="#" class="pbs-search-icon js-pbs-search"><i class="icon-search"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-default probootstrap-navbar">
+      <nav class="navbar navbar-default pbs-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="btn-more js-btn-more visible-xs">
@@ -86,33 +86,33 @@
         </div>
       </nav>
       
-      <section class="probootstrap-section probootstrap-section-colored">
+      <section class="pbs-section pbs-section-colored">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 text-left section-heading probootstrap-animate">
+            <div class="col-md-12 text-left section-heading pbs-animate">
               <h1 class="mb0">Contact Us</h1>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="probootstrap-section probootstrap-section-sm">
+      <section class="pbs-section pbs-section-sm">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div class="row probootstrap-gutter0">
-                <div class="col-md-4" id="probootstrap-sidebar">
-                  <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
+              <div class="row pbs-gutter0">
+                <div class="col-md-4" id="pbs-sidebar">
+                  <div class="pbs-sidebar-inner pbs-overlap pbs-animate">
                     <h3>Pages</h3>
-                    <ul class="probootstrap-side-menu">
+                    <ul class="pbs-side-menu">
                       <li><a href="" id="addBook">Add Book(s)</a></li>
                       <li><a href="" id="addUser">Add User(s)</a></li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-7 col-md-push-1  probootstrap-animate add-book" id="probootstrap-content">
+                <div class="col-md-7 col-md-push-1  pbs-animate add-book" id="pbs-content">
                   <h2>Add Books</h2>
-                  <form id="adder" action="#" method="post" class="probootstrap-form">
+                  <form id="adder" action="#" method="post" class="pbs-form">
                     <div class="form-group">
                       <label for="name">Title</label>
                       <input type="text" class="form-control" id="title" name="name">
@@ -130,9 +130,9 @@
                     </div>
                   </form>
                 </div>
-                <div class="col-md-7 col-md-push-1  probootstrap-animate add-user" id="probootstrap-content">
+                <div class="col-md-7 col-md-push-1  pbs-animate add-user" id="pbs-content">
                   <h2>Add User</h2>
-                  <form id="register" action="#" method="post" class="probootstrap-form">
+                  <form id="register" action="#" method="post" class="pbs-form">
                     <div class="form-group">
                       <label for="name">First Name</label>
                       <input type="text" class="form-control" id="first-name">
@@ -195,10 +195,9 @@
         // Prevent the form from submitting normally
         e.preventDefault();
 
-        // Get the username and password values (change - remove .value)
-        var title = document.getElementById('title').value;
-        var author = document.getElementById('author').value;
-        var description = document.getElementById('description').value;
+        var title = document.getElementById('title');
+        var author = document.getElementById('author');
+        var description = document.getElementById('description');
 
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
@@ -218,16 +217,13 @@
         };
 
           // Send the request with the username and password as JSON
-          //Change - add .value
         xhr.send(JSON.stringify({
-          title: title,
-          author: author,
-          description: description
+          title: title.value,
+          author: author.value,
+          description: description.value
         }));
         
-        title.reset();
-        author.reset();
-        description.reset();
+        adder.reset();
       });
     </script> 
     <script>

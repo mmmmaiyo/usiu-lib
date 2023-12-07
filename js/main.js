@@ -44,7 +44,7 @@
     var moreControl = function() {
         jQuery('.js-btn-more').on('click', function(e) {
             e.preventDefault();
-            jQuery('.probootstrap-header-top').toggleClass('active');
+            jQuery('.pbs-header-top').toggleClass('active');
         });
     };
 
@@ -52,26 +52,26 @@
     	Search
     ----------------------------------------*/
     var searchControl = function() {
-        jQuery('.js-probootstrap-search').on('click', function() {
-            jQuery('#probootstrap-search').addClass('active');
+        jQuery('.js-pbs-search').on('click', function() {
+            jQuery('#pbs-search').addClass('active');
             setTimeout(function() {
-                jQuery('#probootstrap-search').find('#search').focus().select();
+                jQuery('#pbs-search').find('#search').focus().select();
 
             }, 500);
         });
-        jQuery('.js-probootstrap-close').on('click', function() {
-            jQuery('#probootstrap-search').removeClass('active');
+        jQuery('.js-pbs-close').on('click', function() {
+            jQuery('#pbs-search').removeClass('active');
         });
     };
     var loginControl = function() {
-        jQuery('.js-probootstrap-login').on('click', function() {
-            jQuery('#probootstrap-login').addClass('active');
+        jQuery('.js-pbs-login').on('click', function() {
+            jQuery('#pbs-login').addClass('active');
             setTimeout(function() {
-                jQuery('#probootstrap-login').find('#username').focus().select();
+                jQuery('#pbs-login').find('#username').focus().select();
             }, 500);
         });
-        jQuery('.js-probootstrap-close').on('click', function() {
-            jQuery('#probootstrap-login').removeClass('active');
+        jQuery('.js-pbs-close').on('click', function() {
+            jQuery('#pbs-login').removeClass('active');
         });
     };
 
@@ -80,7 +80,7 @@
     ----------------------------------------*/
     var menuHover = function() {
             if (!isMobile.any()) {
-                jQuery('.probootstrap-navbar .navbar-nav li.dropdown').hover(function() {
+                jQuery('.pbs-navbar .navbar-nav li.dropdown').hover(function() {
                     jQuery(this).find('> .dropdown-menu').stop(true, true).delay(200).fadeIn(500).addClass('animated-fast fadeInUp');
                 }, function() {
                     jQuery(this).find('> .dropdown-menu').stop(true, true).fadeOut(200).removeClass('animated-fast fadeInUp')
@@ -254,16 +254,16 @@
     ----------------------------------------*/
     var showcase = function() {
 
-        jQuery('.probootstrap-showcase-nav ul li a').on('click', function(e) {
+        jQuery('.pbs-showcase-nav ul li a').on('click', function(e) {
 
             var $this = jQuery(this),
                 index = $this.closest('li').index();
 
-            $this.closest('.probootstrap-feature-showcase').find('.probootstrap-showcase-nav ul li').removeClass('active');
+            $this.closest('.pbs-feature-showcase').find('.pbs-showcase-nav ul li').removeClass('active');
             $this.closest('li').addClass('active');
 
-            $this.closest('.probootstrap-feature-showcase').find('.probootstrap-images-list li').removeClass('active');
-            $this.closest('.probootstrap-feature-showcase').find('.probootstrap-images-list li').eq(index).addClass('active');
+            $this.closest('.pbs-feature-showcase').find('.pbs-images-list li').removeClass('active');
+            $this.closest('.pbs-feature-showcase').find('.pbs-images-list li').eq(index).addClass('active');
 
             e.preventDefault();
 
@@ -276,27 +276,27 @@
     ----------------------------------------*/
     var contentWayPoint = function() {
         var i = 0;
-        jQuery('.probootstrap-animate').waypoint(function(direction) {
+        jQuery('.pbs-animate').waypoint(function(direction) {
 
-            if (direction === 'down' && !jQuery(this.element).hasClass('probootstrap-animated')) {
+            if (direction === 'down' && !jQuery(this.element).hasClass('pbs-animated')) {
 
                 i++;
 
                 jQuery(this.element).addClass('item-animate');
                 setTimeout(function() {
 
-                    jQuery('body .probootstrap-animate.item-animate').each(function(k) {
+                    jQuery('body .pbs-animate.item-animate').each(function(k) {
                         var el = jQuery(this);
                         setTimeout(function() {
                             var effect = el.data('animate-effect');
                             if (effect === 'fadeIn') {
-                                el.addClass('fadeIn probootstrap-animated');
+                                el.addClass('fadeIn pbs-animated');
                             } else if (effect === 'fadeInLeft') {
-                                el.addClass('fadeInLeft probootstrap-animated');
+                                el.addClass('fadeInLeft pbs-animated');
                             } else if (effect === 'fadeInRight') {
-                                el.addClass('fadeInRight probootstrap-animated');
+                                el.addClass('fadeInRight pbs-animated');
                             } else {
-                                el.addClass('fadeInUp probootstrap-animated');
+                                el.addClass('fadeInUp pbs-animated');
                             }
                             el.removeClass('item-animate');
                         }, k * 50, 'easeInOutExpo');
@@ -546,12 +546,12 @@
         });
     };
     var counterWayPoint = function() {
-        if (jQuery('#probootstrap-counter').length > 0) {
-            jQuery('#probootstrap-counter').waypoint(function(direction) {
+        if (jQuery('#pbs-counter').length > 0) {
+            jQuery('#pbs-counter').waypoint(function(direction) {
 
-                if (direction === 'down' && !jQuery(this.element).hasClass('probootstrap-animated')) {
+                if (direction === 'down' && !jQuery(this.element).hasClass('pbs-animated')) {
                     setTimeout(counter, 400);
-                    jQuery(this.element).addClass('probootstrap-animated');
+                    jQuery(this.element).addClass('pbs-animated');
                 }
             }, { offset: '90%' });
         }
@@ -620,8 +620,8 @@
         menuHover();
         showcase();
         contentWayPoint();
-        if (jQuery('.probootstrap-gallery').length > 0) {
-            initPhotoSwipeFromDOM('.probootstrap-gallery');
+        if (jQuery('.pbs-gallery').length > 0) {
+            initPhotoSwipeFromDOM('.pbs-gallery');
         }
         galleryMasonry();
         counterWayPoint();
@@ -647,7 +647,7 @@
                 },
                 success: function(user) {
                     // Replace the login link with the username
-                    $('.js-probootstrap-login').text(user.username);
+                    $('.js-pbs-login').text(user.username);
                 },
                 error: function(err) {
                     console.log(err.responseText);

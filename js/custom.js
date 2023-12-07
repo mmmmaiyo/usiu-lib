@@ -29,8 +29,8 @@ jQuery(document).ready(function() {
 			var user = JSON.parse(xhr.responseText);
 
 			// Replace the login link with the username
-			document.querySelector('.probootstrap-login-icon').textContent = user.username;
-			document.getElementById('probootstrap-login').style.display = 'none';
+			document.querySelector('.pbs-login-icon').textContent = user.username;
+			document.getElementById('pbs-login').style.display = 'none';
 			localStorage.setItem('isLoggedIn', 'true');
 			localStorage.setItem('username', user.username);
 			} else {
@@ -48,11 +48,11 @@ jQuery(document).ready(function() {
 	});
 
 	// JavaScript
-	var loginLink = document.querySelector('.js-probootstrap-login');
-	var loginForm = document.getElementById('probootstrap-login');
-	var link = document.querySelector('.probootstrap-login-icon');
+	var loginLink = document.querySelector('.js-pbs-login');
+	var loginForm = document.getElementById('pbs-login');
+	var link = document.querySelector('.pbs-login-icon');
 	// Get logout link element
-	var logOut = document.getElementById('js-probootstrap-logout');
+	var logOut = document.getElementById('js-pbs-logout');
 
 
 	// Get account link element
@@ -63,7 +63,7 @@ jQuery(document).ready(function() {
 	  loginForm.style.visibility = 'visible';
 	});
 
-	var closeLink = document.querySelector('.js-probootstrap-closes');
+	var closeLink = document.querySelector('.js-pbs-closes');
 	closeLink.addEventListener('click', function (e) {
 	  e.preventDefault();
 	  loginForm.style.visibility = 'hidden';
@@ -78,20 +78,20 @@ jQuery(document).ready(function() {
 
 	window.onload = function () {
 	  function searchControl() {
-		var probootstrapSearch = document.getElementById('probootstrap-search');
+		var pbsSearch = document.getElementById('pbs-search');
 		var searchInput = document.getElementById('searchs');
 
 		// Event listener for clicking the search icon
-		document.querySelector('.js-probootstrap-search').addEventListener('click', function () {
-		  probootstrapSearch.classList.add('active');
+		document.querySelector('.js-pbs-search').addEventListener('click', function () {
+		  pbsSearch.classList.add('active');
 		  setTimeout(function () {
 			searchInput.focus();
 		  }, 500);
 		});
 
 		// Event listener for clicking the close icon
-		document.querySelector('.js-probootstrap-close').addEventListener('click', function () {
-		  probootstrapSearch.classList.remove('active');
+		document.querySelector('.js-pbs-close').addEventListener('click', function () {
+		  pbsSearch.classList.remove('active');
 		});
 	  }
 
@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
 
 		if (username) {
 		  // If the username is found, replace the login link with the username
-		  document.querySelector('.probootstrap-login-icon').textContent = username;
+		  document.querySelector('.pbs-login-icon').textContent = username;
 		  //Make logout element visible
 		  logOut.style.visibility = 'visible';
 		  console.log('username', logOut);
@@ -183,7 +183,7 @@ jQuery(document).ready(function() {
 			  bookElement.className = 'col-md-6';
 
 			  bookElement.innerHTML = `
-				<div class="probootstrap-service-2 probootstrap-animates ">
+				<div class="pbs-service-2 pbs-animates ">
 				  <div class="text " style="width:auto">
 					<h3>${book.title}</h3>
 					<p>${book.author}</p>
@@ -227,7 +227,7 @@ jQuery(document).ready(function() {
 		  // Event listener for the search input
 		  
 		  var searchInput = document.getElementById('searchs');
-		  var probootstrapSearch = document.getElementById('probootstrap-search');
+		  var pbsSearch = document.getElementById('pbs-search');
 
 		  searchInput.addEventListener('keyup', function (event) {
 			if (event.key === 'Enter') {

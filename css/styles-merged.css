@@ -41,7 +41,7 @@ video {
     vertical-align: baseline
 }
 
-#js-probootstrap-logout {
+#js-pbs-logout {
     visibility: hidden;
 }
 
@@ -8053,7 +8053,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
-#js-probootstrap-logout {
+#js-pbs-logout {
     visibility: hidden;
 }
 
@@ -8071,7 +8071,7 @@ Copyright (c) 2015 Daniel Eden
     animation-fill-mode: both;
 }
 
-.probootstrap-animated {
+.pbs-animated {
     -webkit-animation-duration: .8s;
     animation-duration: .8s;
     -webkit-animation-fill-mode: both;

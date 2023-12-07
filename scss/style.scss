@@ -1,7 +1,7 @@
 /*!==============================
  * Theme Name: Enlight
  * Theme URL: https://probootstrap.com/enlight-free-education-responsive-bootstrap-website-template
- * Author: ProBootstrap.com
+ * Author: probootstrap.com
  * Author URL: https://probootstrap.com
  * License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
  */
@@ -60,7 +60,7 @@ ol {
     margin-bottom: 30px;
 }
 
-#js-probootstrap-logout a {
+#js-pbs-logout a {
     transition: .3s all;
     color: $brand-primary;
     &:hover,
@@ -97,7 +97,7 @@ ol {
 }
 
 // page wrap
-.probootstrap-page-wrapper {
+.pbs-page-wrapper {
     max-width: 1500px;
     margin: 0 auto;
     background: $brand-white;
@@ -115,14 +115,14 @@ ol {
     }
 }
 
-.probootstrap-sidebar-inner {
+.pbs-sidebar-inner {
     background: $brand-white;
     padding: 40px;
     margin-bottom: 40px;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, .1);
 }
 
-.probootstrap-side-menu {
+.pbs-side-menu {
     padding: 0;
     margin: 0;
     li {
@@ -140,7 +140,7 @@ ol {
 }
 
 // top
-.probootstrap-header-top {
+.pbs-header-top {
     margin-top: 0;
     position: relative;
     transition: .3s all;
@@ -159,7 +159,7 @@ ol {
     }
 }
 
-.probootstrap-top-quick-contact-info {
+.pbs-top-quick-contact-info {
     padding-top: 7px;
     padding-bottom: 7px;
     font-size: 12px;
@@ -174,7 +174,7 @@ ol {
     }
 }
 
-.probootstrap-top-social {
+.pbs-top-social {
     text-align: right;
     @media screen and (max-width: $screen-sm) {
         text-align: left;
@@ -201,12 +201,12 @@ ol {
     }
 }
 
-.probootstrap-search-icon {
+.pbs-search-icon {
     margin-left: 30px;
 }
 
 // navigation
-.probootstrap-navbar {
+.pbs-navbar {
     border: none;
     box-shadow: none;
     border-radius: 0px;
@@ -607,7 +607,7 @@ ol {
     }
 }
 
-.probootstrap-hero {
+.pbs-hero {
     background-size: cover;
     background-position: center center;
     >.overlay {
@@ -623,7 +623,7 @@ ol {
         position: relative;
         z-index: 2;
     }
-    .probootstrap-hero-text {
+    .pbs-hero-text {
         padding-top: 200px;
         padding-bottom: 200px;
         @media screen and (max-width: $screen-sm) {
@@ -631,8 +631,8 @@ ol {
             padding-bottom: 50px;
         }
     }
-    &.probootstrap-sm-hero {
-        .probootstrap-hero-text {
+    &.pbs-sm-hero {
+        .pbs-hero-text {
             padding-top: 150px;
             padding-bottom: 150px;
             @media screen and (max-width: $screen-sm) {
@@ -641,8 +641,8 @@ ol {
             }
         }
     }
-    &.probootstrap-xs-hero {
-        .probootstrap-hero-text {
+    &.pbs-xs-hero {
+        .pbs-hero-text {
             padding-top: 90px;
             padding-bottom: 90px;
             @media screen and (max-width: $screen-sm) {
@@ -670,7 +670,7 @@ ol {
             padding: 15px 20px;
         }
     }
-    &.probootstrap-hero-colored {
+    &.pbs-hero-colored {
         background: $brand-primary;
         h1 {
             color: rgba(255, 255, 255, 1);
@@ -681,7 +681,7 @@ ol {
     }
 }
 
-.probootstrap-feature-showcase {
+.pbs-feature-showcase {
     margin-top: 100px;
     position: relative;
     @media screen and (max-width: $screen-sm) {
@@ -689,9 +689,9 @@ ol {
     }
 }
 
-.probootstrap-home-showcase-wrap {
+.pbs-home-showcase-wrap {
     width: 100%;
-    .probootstrap-home-showcase-inner {
+    .pbs-home-showcase-inner {
         box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .08);
         z-index: 1;
         height: 500px;
@@ -701,7 +701,7 @@ ol {
         @media screen and (max-width: $screen-sm) {
             height: 100%;
         }
-        .probootstrap-chrome {
+        .pbs-chrome {
             background: #dddde0;
             padding: 15px;
             border-radius: 5px 5px 0 0;
@@ -723,7 +723,7 @@ ol {
             }
         }
     }
-    .probootstrap-image-showcase {
+    .pbs-image-showcase {
         @media screen and (max-width: $screen-sm) {
             height: 400px;
         }
@@ -758,7 +758,7 @@ ol {
     }
 }
 
-.probootstrap-showcase-nav {
+.pbs-showcase-nav {
     margin-top: 30px;
     ul {
         padding: 0;
@@ -846,25 +846,25 @@ ol {
     }
 }
 
-.probootstrap-section {
+.pbs-section {
     padding: 7em 0;
     position: relative;
-    &.probootstrap-section-sm {
+    &.pbs-section-sm {
         padding: 3em 0;
     }
-    &.probootstrap-border-top {
+    &.pbs-border-top {
         border-top: 1px solid rgba(0, 0, 0, .1);
     }
-    &.probootstrap-border-bottom {
+    &.pbs-border-bottom {
         border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
     >.container {
-        &.probootstrap-border-top {
+        &.pbs-border-top {
             padding-top: 50px;
             border-top: 1px solid rgba(0, 0, 0, .1);
         }
     }
-    &.probootstrap-section-colored {
+    &.pbs-section-colored {
         background: $brand-primary;
         .section-heading {
             h2 {
@@ -875,13 +875,13 @@ ol {
             }
         }
     }
-    &.probootstrap-bg-white {
+    &.pbs-bg-white {
         background: $brand-white;
     }
     @media screen and (max-width: $screen-sm) {
         padding: 3em 0;
     }
-    &.probootstrap-bg {
+    &.pbs-bg {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -927,7 +927,7 @@ ol {
     line-height: 32px;
 }
 
-.probootstrap-cta {
+.pbs-cta {
     padding: 3em 0;
     background: $brand-primary;
     color: $brand-white;
@@ -971,7 +971,7 @@ ol {
     }
 }
 
-.probootstrap-footer {
+.pbs-footer {
     padding: 7em 0;
     padding-bottom: 0;
     background: $brand-black;
@@ -985,7 +985,7 @@ ol {
     @media screen and (max-width: $screen-sm) {
         padding: 3em 0;
     }
-    .probootstrap-copyright {
+    .pbs-copyright {
         padding: 3em 0;
         margin-top: 20px;
         background: lighten($brand-black, 10%);
@@ -1003,7 +1003,7 @@ ol {
             }
         }
     }
-    .probootstrap-footer-widget {
+    .pbs-footer-widget {
         float: left;
         width: 100%;
         margin-bottom: 30px;
@@ -1021,7 +1021,7 @@ ol {
                 list-style: none;
             }
         }
-        .probootstrap-contact-info {
+        .pbs-contact-info {
             li {
                 display: block;
                 i {
@@ -1037,7 +1037,7 @@ ol {
             }
         }
     }
-    .probootstrap-back-to-top {
+    .pbs-back-to-top {
         text-align: right;
         @media screen and (max-width: $screen-sm) {
             text-align: left;
@@ -1048,7 +1048,7 @@ ol {
 
 // Components
 // search 
-.probootstrap-search {
+.pbs-search {
     position: fixed;
     top: 0;
     left: 0;
@@ -1065,7 +1065,7 @@ ol {
         opacity: 1;
         visibility: visible;
     }
-    .probootstrap-close {
+    .pbs-close {
         color: darken(#ccc, 10%);
         right: 30px;
         top: 30px;
@@ -1112,14 +1112,14 @@ ol {
 }
 
 // uppercase
-.probootstrap-uppercase {
+.pbs-uppercase {
     color: lighten($brand-black, 70%);
     font-size: 14px;
     margin-bottom: 5px;
 }
 
 // footer social
-.probootstrap-footer-social {
+.pbs-footer-social {
     padding: 0;
     margin: 0;
     li {
@@ -1140,7 +1140,7 @@ ol {
 }
 
 // teacher
-.probootstrap-teacher {
+.pbs-teacher {
     padding: 20px;
     border: 1px solid lighten($brand-black, 90%);
     transition: .3s all;
@@ -1164,7 +1164,7 @@ ol {
             margin-bottom: 10px;
         }
     }
-    .probootstrap-footer-social {
+    .pbs-footer-social {
         li {
             a {
                 font-size: 15px;
@@ -1200,31 +1200,31 @@ ol {
 }
 
 // counter
-.probootstrap-counter-wrap {
+.pbs-counter-wrap {
     float: left;
     width: 100%;
     margin-bottom: 30px;
-    .probootstrap-icon,
-    .probootstrap-text {
+    .pbs-icon,
+    .pbs-text {
         display: table-cell;
         vertical-align: top;
     }
-    .probootstrap-icon {
+    .pbs-icon {
         width: 60px;
         i {
             font-size: 40px;
             color: $brand-secondary;
         }
     }
-    .probootstrap-text {
-        .probootstrap-counter {
+    .pbs-text {
+        .pbs-counter {
             display: block;
             font-size: 40px;
             color: $brand-black;
             margin-bottom: 10px;
             font-family: $font-secondary;
         }
-        .probootstrap-counter-label {
+        .pbs-counter-label {
             display: block;
             color: darken(#ccc, 10%);
             line-height: 20px;
@@ -1233,7 +1233,7 @@ ol {
 }
 
 // flex block
-.probootstrap-overlap {
+.pbs-overlap {
     margin-top: -150px;
     position: relative;
     @media screen and (max-width: $screen-sm) {
@@ -1241,7 +1241,7 @@ ol {
     }
 }
 
-.probootstrap-flex-block {
+.pbs-flex-block {
     display: flex;
     flex-wrap: wrap;
     margin-top: -200px;
@@ -1249,7 +1249,7 @@ ol {
     @media screen and (max-width: $screen-sm) {
         margin-top: -100px;
     }
-    .probootstrap-text {
+    .pbs-text {
         width: 30%;
         margin-right: 20px;
         background: $brand-white;
@@ -1270,7 +1270,7 @@ ol {
             }
         }
     }
-    .probootstrap-image {
+    .pbs-image {
         width: 67%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1326,7 +1326,7 @@ ol {
 // center
 .nav-tabs,
 .nav-pills {
-    &.probootstrap-center {
+    &.pbs-center {
         text-align: center;
         >li {
             float: none;
@@ -1337,7 +1337,7 @@ ol {
             }
         }
     }
-    &.probootstrap-tabs {
+    &.pbs-tabs {
         >li {
             >a {
                 border-radius: 0px;
@@ -1373,13 +1373,13 @@ ol {
     }
 }
 
-.probootstrap-tab-section {
+.pbs-tab-section {
     @media screen and (max-width: $screen-sm) {
         padding-bottom: 0!important;
     }
 }
 
-.probootstrap-tab-style-1 {
+.pbs-tab-style-1 {
     position: absolute;
     bottom: 1px;
     width: 100%;
@@ -1389,8 +1389,8 @@ ol {
 }
 
 // box
-.probootstrap-date,
-.probootstrap-location {
+.pbs-date,
+.pbs-location {
     display: block;
     color: lighten($brand-black, 40%);
     i {
@@ -1402,12 +1402,12 @@ ol {
     }
 }
 
-.probootstrap-featured-news-box {
-    .probootstrap-media {
+.pbs-featured-news-box {
+    .pbs-media {
         position: relative;
         z-index: 1;
     }
-    .probootstrap-text {
+    .pbs-text {
         position: relative;
         z-index: 2;
         background: $brand-white;
@@ -1430,7 +1430,7 @@ ol {
     &:hover,
     &:focus {
         outline: none;
-        .probootstrap-text {
+        .pbs-text {
             background: $brand-primary;
             top: -40px;
             box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, .1);
@@ -1442,8 +1442,8 @@ ol {
             p {
                 color: rgba(255, 255, 255, .7);
             }
-            .probootstrap-date,
-            .probootstrap-location {
+            .pbs-date,
+            .pbs-location {
                 color: rgba(255, 255, 255, .8);
                 i {
                     color: rgba(255, 255, 255, .4);
@@ -1517,7 +1517,7 @@ ol {
     }
 }
 
-.probootstrap-service-2 {
+.pbs-service-2 {
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, .1);
@@ -1566,7 +1566,7 @@ ol {
                 margin-bottom: 0;
             }
         }
-        .probootstrap-meta {
+        .pbs-meta {
             font-size: 14px;
             color: lighten($brand-black, 70%);
         }
@@ -1583,7 +1583,7 @@ ol {
 }
 
 // gallery
-.probootstrap-gallery {
+.pbs-gallery {
     width: 100%;
     float: left;
     figure {
@@ -1711,7 +1711,7 @@ ol {
     }
 }
 
-.probootstrap-gallery-item {
+.pbs-gallery-item {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1736,7 +1736,7 @@ ol {
 }
 
 // form
-.probootstrap-form {
+.pbs-form {
     margin-bottom: 50px;
     label {
         font-weight: normal;
@@ -1759,7 +1759,7 @@ ol {
 }
 
 // animate
-.probootstrap-animate {
+.pbs-animate {
     opacity: 0;
     visibility: hidden;
 }
@@ -1784,10 +1784,10 @@ ol {
             }
         }
     }
-    .probootstrap-modal-flex {
+    .pbs-modal-flex {
         display: flex;
         flex-wrap: wrap;
-        .probootstrap-modal-figure {
+        .pbs-modal-figure {
             width: 40%;
             background-size: cover;
             background-position: center center;
@@ -1796,7 +1796,7 @@ ol {
                 height: 200px;
             }
         }
-        .probootstrap-modal-content {
+        .pbs-modal-content {
             width: 60%;
             padding: 40px;
             position: relative;
@@ -1805,8 +1805,8 @@ ol {
                 padding-right: 15px;
             }
         }
-        .probootstrap-modal-figure,
-        .probootstrap-modal-content {
+        .pbs-modal-figure,
+        .pbs-modal-content {
             @media screen and (max-width: $screen-xs) {
                 width: 100%;
             }
@@ -1819,10 +1819,10 @@ ol {
                 margin-bottom: 10px;
             }
         }
-        .probootstrap-remember {
+        .pbs-remember {
             float: left;
         }
-        .probootstrap-forgot {
+        .pbs-forgot {
             float: right;
             @media screen and (max-width: $screen-xs) {
                 float: left;
@@ -1831,7 +1831,7 @@ ol {
         .form-group {
             position: relative;
         }
-        .probootstrap-or {
+        .pbs-or {
             padding: 10px 0;
             text-align: center;
             display: block;
@@ -1900,7 +1900,7 @@ ol {
 }
 
 // contact info
-.probootstrap-contact-info {
+.pbs-contact-info {
     padding: 0;
     margin: 0 0 30px 0;
     li {
@@ -1923,7 +1923,7 @@ ol {
 }
 
 // team
-.probootstrap-team {
+.pbs-team {
     margin-bottom: 30px;
     float: left;
     display: block;
@@ -1941,7 +1941,7 @@ ol {
         transition: .3s all;
         transition-timing-function: cubic-bezier(.57, .21, .69, 1.25);
     }
-    .probootstrap-team-info {
+    .pbs-team-info {
         visibility: hidden;
         opacity: 0;
         position: absolute;
@@ -2005,7 +2005,7 @@ ol {
                 display: none;
             }
         }
-        .probootstrap-team-info {
+        .pbs-team-info {
             opacity: 1;
             visibility: visible;
             margin-top: 0px;
@@ -2013,18 +2013,18 @@ ol {
     }
 }
 
-// probootstrap flexbox
-.probootstrap-flex-section {
+// pbs flexbox
+.pbs-flex-section {
     padding: 7em 0;
-    &.probootstrap-bg-white {
+    &.pbs-bg-white {
         background: $brand-white;
     }
 }
 
-.probootstrap-flex {
+.pbs-flex {
     display: flex;
     flex-wrap: wrap;
-    .probootstrap-flex-item {
+    .pbs-flex-item {
         width: 33.3333%;
         padding: 40px;
         transition: .3s all;
@@ -2075,11 +2075,11 @@ ol {
 }
 
 // pricing
-.probootstrap-pricing-wrap {
+.pbs-pricing-wrap {
     position: relative;
 }
 
-.probootstrap-pricing {
+.pbs-pricing {
     background: $brand-white;
     float: left;
     width: 100%;
@@ -2115,16 +2115,16 @@ ol {
             font-size: 14px;
         }
     }
-    .probootstrap-price-wrap {
+    .pbs-price-wrap {
         margin-bottom: 50px;
-        .probootstrap-price {
+        .pbs-price {
             font-size: 50px;
             color: $brand-primary;
             font-weight: 100;
             display: block;
             margin-bottom: 10px;
         }
-        .probootstrap-price-per-month {
+        .pbs-price-per-month {
             font-size: 13px;
         }
     }
@@ -2144,7 +2144,7 @@ ol {
 }
 
 // Testimonial
-.probootstrap-testimony-wrap {
+.pbs-testimony-wrap {
     background: $brand-white;
     border-radius: 4px;
     padding: 20px;
@@ -2181,7 +2181,7 @@ ol {
         padding-bottom: 40px;
         padding-top: 20px;
     }
-    .probootstrap-testimony-wrap {
+    .pbs-testimony-wrap {
         // border: 1px solid lighten(#ccc, 15%);
         max-width: 700px;
         margin: 0 auto;
@@ -2206,14 +2206,14 @@ ol {
     border: none;
     margin: 0 0 0;
     @extend .slider-height;
-    .probootstrap-heading {
+    .pbs-heading {
         @extend .hero-text-heading;
     }
-    .probootstrap-subheading {
+    .pbs-subheading {
         @extend .hero-text-subheading;
         font-size: 20px;
     }
-    .probootstrap-slider-text {
+    .pbs-slider-text {
         margin-top: 300px;
         @media screen and (max-width: $screen-xs) {
             margin-top: 150px;
@@ -2360,7 +2360,7 @@ ol {
 }
 
 .owl-carousel .owl-controls,
-.owl-carousel-posts .owl-controls,
+.owl-carousel-posts .owl-controls
 {
     margin-top: 0;
 }
@@ -2475,7 +2475,7 @@ ol {
     border: 2px solid $brand-black;
 }
 
-.probootstrap-testimonial {
+.pbs-testimonial {
     &:before {
         background: rgba(0, 0, 0, .7)!important;
     }
@@ -2596,7 +2596,7 @@ ol {
 }
 
 // Helper
-.probootstrap-gutter0 {
+.pbs-gutter0 {
     >div[class*='col-'] {
         padding-right: 0px;
         padding-left: 0px;
@@ -2607,7 +2607,7 @@ ol {
     }
 }
 
-.probootstrap-gutter40 {
+.pbs-gutter40 {
     >div[class*='col-'] {
         padding-right: 20px;
         padding-left: 20px;
@@ -2618,7 +2618,7 @@ ol {
     }
 }
 
-.probootstrap-gutter60 {
+.pbs-gutter60 {
     >div[class*='col-'] {
         padding-right: 30px;
         padding-left: 30px;
@@ -2740,6 +2740,6 @@ ol {
     }
 }
 
-#js-probootstrap-logout {
+#js-pbs-logout {
     visibility: hidden;
 }
