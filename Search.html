@@ -87,13 +87,12 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li id="userAccount" style="visibility: hidden;"><a href="account.html">My Account</a></li>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Browse</a>
                             <ul class="dropdown-menu">
                                 <li><a href="resources.html">eResources</a></li>
                                 <li><a href="newspapers.html">eNewspapers</a></li>
-                                <li><a href="books.html">All Books</a></li>
                             </ul>
                         </li>
                         <li><a href="about-us.html">About Us</a></li>
@@ -108,7 +107,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center section-heading pbs-animate">
-                        <h2>All Books</h2>
+                        <h2>Search Result(s)</h2>
                     </div>
                 </div>
                 <!-- This is where the books will be rendered -->
@@ -212,7 +211,7 @@
                     <h3>${book.title}</h3>
                     <p>${book.author}</p>
                     <p>${book.description}</p>
-                    <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Order Book</button>
+                    <button class="btn btn-primary order-book-btn" data-username="${username}" data-bookid="${book._id}">Borrow Book</button>
                 </div>
             </div>
         `;
@@ -233,11 +232,11 @@
 
                                     if (response.ok) {
                                         // Handle success (e.g., show a success message)
-                                        console.log('Book ordered successfully');
-                                        alert('Book ordered successfully')
+                                        console.log('Book borrowed successfully');
+                                        alert('Book borrowed successfully')
                                     } else {
                                         // Handle errors (e.g., show an error message)
-                                        console.error('Failed to order book');
+                                        console.error('Failed to borrow book');
                                     }
                                 } catch (error) {
                                     console.error('An error occurred:', error);
